@@ -8,11 +8,13 @@
 body {
   background-color: var(--bg-color);
 }
+
 .notes-page {
   width: 100%;
   min-height: 100vh;
   color: whitesmoke;
 }
+
 .notes-page header {
   background-color: #242424;
   max-width: 1920px;
@@ -25,10 +27,12 @@ body {
   align-items: center;
   box-shadow: 0 0 5px #31313142;
 }
+
 a {
   text-decoration: none;
   color: whitesmoke;
 }
+
 .notes-page header .logo {
   letter-spacing: 2px;
 }
@@ -49,16 +53,20 @@ a {
   display: inline-block;
   padding: 0 15px;
 }
+
 .notes-page header ul li a {
   opacity: 0.7;
 }
+
 .notes-page header ul li a:hover {
   opacity: 1;
 }
+
 .notes-page section {
   width: 100%;
   padding: 20px 0;
 }
+
 .note-wrapper {
   max-width: 1820px;
   display: flex;
@@ -66,6 +74,7 @@ a {
   justify-content: center;
   margin: auto;
 }
+
 .card {
   width: 300px;
   border: none;
@@ -78,6 +87,7 @@ a {
   cursor: pointer;
   height: fit-content;
 }
+
 .card .close {
   position: absolute;
   top: 0;
@@ -91,12 +101,14 @@ a {
   margin-right: 6px;
   margin-top: 7px;
 }
+
 .card h3 {
   margin-right: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .card .text-wrapper {
   width: 100%;
   height: 150px;
@@ -107,10 +119,12 @@ a {
   margin: 10px 0;
   color: #eceff1;
 }
+
 .card .date {
   text-align: right;
   color: #eceff1;
 }
+
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -129,7 +143,7 @@ a {
   padding: 10px 15px;
   font-weight: 700;
 }
-/* ******* Create Note******************* */
+
 .create-note {
   max-width: 500px;
   width: 100%;
@@ -196,6 +210,7 @@ textarea:focus {
   letter-spacing: 2px;
   color: rgb(7, 25, 63);
 }
+
 @media (max-width: 500px) {
   * {
     padding: 0 4px;
@@ -207,12 +222,12 @@ textarea:focus {
   }
 }
 
-/* *********Login / Register******* */
 .login-page {
   position: relative;
   width: 100%;
   min-height: 100vh;
 }
+
 .login input,
 .register input {
   margin-bottom: 15px;
@@ -235,19 +250,23 @@ input:focus {
   transform: translate(-50%, -50%);
   background: var(--form-color);
 }
+
 .login-page h2,
 .login-page h3 {
   color: #fff8;
 }
+
 .login-page h3 {
   text-align: center;
   text-transform: uppercase;
   margin-top: 15px;
 }
+
 .login-page p {
   margin: 10px 0;
   color: white;
 }
+
 .login-page span {
   color: var(--primary-color);
   cursor: pointer;
@@ -269,6 +288,7 @@ button {
   border-left: 0;
   background: rgba(0, 0, 0, 0.1);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #f8c579;
   border-radius: 0;
