@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './notes/Nav';
+import NavBar from './notes/NavBar';
 import Home from './notes/Home';
 import CreateNote from './notes/CreateNote';
 import EditNote from './notes/EditNote';
@@ -9,7 +9,7 @@ export default function Notes({ setIsLogin }) {
   return (
     <Router>
       <div className='notes-page'>
-        <Header setIsLogin={setIsLogin} />
+        <NavBar setIsLogin={setIsLogin} />
         <section>
           <Route path='/' component={Home} exact />
           <Route path='/create' component={CreateNote} exact />

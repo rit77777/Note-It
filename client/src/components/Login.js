@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import api from '../api/api';
 
@@ -21,7 +23,18 @@ export default function Login({ setIsLogin }) {
         password: user.password,
       });
       setUser({ name: '', email: '', password: '' });
-      setErr(res.data.msg);
+      localStorage.setItem('tokenStore', res.data.token);
+      setIsLogin(true);
+      toast.dark('✔️ Register Successful', {
+        position: 'bottom-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      // setErr(res.data.msg);
     } catch (err) {
       err.response.data.msg && setErr(err.response.data.msg);
     }
@@ -37,6 +50,15 @@ export default function Login({ setIsLogin }) {
       setUser({ name: '', email: '', password: '' });
       localStorage.setItem('tokenStore', res.data.token);
       setIsLogin(true);
+      toast.dark('✔️ Login Successful', {
+        position: 'bottom-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (err) {
       err.response.data.msg && setErr(err.response.data.msg);
     }

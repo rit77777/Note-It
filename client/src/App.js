@@ -16,7 +16,9 @@ function App() {
           headers: { Authorization: token },
         });
         setIsLogin(verified.data);
-        if (verified.data === false) return localStorage.clear();
+        if (verified.data === false) { 
+          return localStorage.clear();
+        }
       } else {
         setIsLogin(false);
       }
@@ -25,13 +27,13 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <>
       {isLogin ? (
         <Notes setIsLogin={setIsLogin} />
       ) : (
         <Login setIsLogin={setIsLogin} />
       )}
-    </div>
+    </>
   );
 }
 
