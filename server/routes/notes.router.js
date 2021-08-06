@@ -7,7 +7,7 @@ router.route('/').get(auth, noteCtrl.getNotes).post(auth, noteCtrl.createNote);
 router
   .route('/:id')
   .get(auth, noteCtrl.getNote)
-  .patch(auth, noteCtrl.updateNote)
+  .put(auth, noteCtrl.updateNote)
   .delete(auth, noteCtrl.deleteNote);
 
 module.exports = router;

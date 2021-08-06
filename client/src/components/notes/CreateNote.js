@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import api from '../../api/api';
 
@@ -30,6 +31,16 @@ export default function CreateNote() {
 
         await api.post('/api/notes', newNote, {
           headers: { Authorization: token },
+        });
+
+        toast.dark('💾 Notes Created', {
+          position: 'bottom-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
         });
 
         return history.push('/');

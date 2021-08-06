@@ -1,17 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import logo from '../../images/notes.png';
 
 export default function Nav({ setIsLogin }) {
   const logoutSubmit = () => {
     localStorage.clear();
     setIsLogin(false);
+    toast.dark('✔️ Logout Successful', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
     <>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <header>
         <div className='logo'>
           <img className='img' src={logo} alt='logo'></img>

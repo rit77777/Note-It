@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 import api from '../api/api';
 
@@ -27,7 +26,7 @@ export default function Login({ setIsLogin }) {
       setIsLogin(true);
       toast.dark('✔️ Register Successful', {
         position: 'bottom-right',
-        autoClose: 3000,
+        autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -52,7 +51,7 @@ export default function Login({ setIsLogin }) {
       setIsLogin(true);
       toast.dark('✔️ Login Successful', {
         position: 'bottom-right',
-        autoClose: 3000,
+        autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

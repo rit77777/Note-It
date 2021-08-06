@@ -96,6 +96,7 @@ a {
   margin: 15px;
   cursor: pointer;
   height: fit-content;
+  word-wrap: break-word;
 }
 
 .card .close {

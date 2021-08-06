@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Login from './components/Login';
 import Notes from './components/Notes';
-
 import api from './api/api';
 import './App.css';
 
@@ -16,7 +18,7 @@ function App() {
           headers: { Authorization: token },
         });
         setIsLogin(verified.data);
-        if (verified.data === false) { 
+        if (verified.data === false) {
           return localStorage.clear();
         }
       } else {
@@ -28,6 +30,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       {isLogin ? (
         <Notes setIsLogin={setIsLogin} />
       ) : (
